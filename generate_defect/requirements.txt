@@ -1,0 +1,7 @@
+pymatgen
+monty
+numpy
+vise
+pyyaml
+tqdm
+

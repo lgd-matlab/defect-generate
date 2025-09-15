@@ -1,0 +1,25 @@
+paths:
+  supercell_info: supercell_info.json
+  defect_in: defect_in.yaml
+  perfect_dir: perfect
+  log_file: generate_defect.log
+
+pydefect_src: null  # set to a local pydefect source path if not installed
+
+defect_set:
+  overwritten_oxi_states: {}
+  dopants: []
+  ele_neg_diff: 2.0
+  keywords: []
+
+entries:
+  skip_existing: true
+
+entry:
+  charge: null
+  perfect_poscar: null  # default: <perfect_dir>/POSCAR
+
+interstitial:
+  base_structure: null  # path to primitive/unit cell POSCAR; if null, use unitcell in supercell_info
+  info: ""
+

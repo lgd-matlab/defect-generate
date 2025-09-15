@@ -1,0 +1,50 @@
+{
+  "input_file": "C:\\Users\\lenovo\\Desktop\\缺陷产生脚本\\sub-direction\\U-primitvie",
+  "space_group": "Cmcm",
+  "supercell": [
+    3,
+    3,
+    3
+  ],
+  "primary_index": 10,
+  "secondary_index": 13,
+  "elements": {
+    "D1": "Pu",
+    "D2": "Pu"
+  },
+  "direction_uvw": [
+    0,
+    1,
+    0
+  ],
+  "auto_fallback": true,
+  "tol_A": 5.0,
+  "theta_tol_deg": 10.0,
+  "neighbor_choice": {
+    "j": 13,
+    "proj": 5.865552372925269,
+    "angle_deg": 0.0,
+    "dist": 5.865552372925269,
+    "image": [
+      0,
+      0,
+      0
+    ],
+    "mode": "either"
+  },
+  "verification": {
+    "in_first_shell": true,
+    "angle_ok": true,
+    "angle_deg": 0.0,
+    "proj": 5.865552372925269,
+    "dist": 5.865552372925269,
+    "image": [
+      0,
+      0,
+      0
+    ],
+    "d1_min": 2.8582736372796917
+  },
+  "formula_before": "U108",
+  "formula_after": "Pu2 U106"
+}

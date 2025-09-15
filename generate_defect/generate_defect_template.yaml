@@ -1,0 +1,44 @@
+﻿# generate_defect 配置模板 (YAML)
+# 说明：
+# - 配置优先级：CLI 参数 > 此配置文件 > 脚本内置默认
+# - Windows 路径建议使用双引号并避免空格；如需绝对路径请自行替换
+# - 带有示例值与中文注释，修改为你的项目实际值后再使用
+
+paths:
+  # 超胞信息文件 (由 PyDefect 的 supercell 步骤生成)
+  supercell_info: "supercell_info.json"
+  # 缺陷集合输出文件 (供 defect-entries 使用)
+  defect_in: "defect_in.yaml"
+  # 存放完美结构 POSCAR 的目录名称
+  perfect_dir: "perfect"
+  # 日志文件；设为 null 则只输出到控制台
+  log_file: "generate_defect.log"
+
+# 若未安装 PyDefect，可填写源码路径；否则保持 null
+pydefect_src: null
+
+defect_set:
+  # 手动覆盖价态 (示例：氧化物)；键为元素，值为整数价态
+  overwritten_oxi_states: {O: -2, Zn: 2}  # 示例：ZnO
+  # 掺杂元素列表 (示例：Si 中 B 掺杂、P 掺杂)
+  dopants: [B, P]  # 可留空 []
+  # 允许的电负性差阈值 (浮点数)
+  ele_neg_diff: 2.0
+  # 关键字筛选，常见有 Va(空位), i(间隙), X_on_Y(置换) 等
+  keywords: [Va, i]  # 示例：只生成空位和间隙
+
+entries:
+  # 批量生成时是否跳过已存在目录
+  skip_existing: true
+
+entry:
+  # 单条目 make-entry 的电荷；null 表示自动从 INCAR/POTCAR 估算
+  charge: null
+  # 完美结构 POSCAR；为 null 时使用 <paths.perfect_dir>/POSCAR
+  perfect_poscar: null
+
+interstitial:
+  # 原胞/标准胞的 POSCAR 路径；若 supercell_info 中已包含 unitcell_structure 可置 null
+  base_structure: null
+  # 追加的间隙位点备注信息
+  info: ""
